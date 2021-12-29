@@ -1,0 +1,34 @@
+ALGORITHM READINGSENTENCE
+VAR
+    countLength : INTEGER := 0;
+    countWord : INTEGER := 0;
+    countVowel : INTEGER := 0;
+
+VAR  Sentence : STRING := "this is a sentence."
+
+BEGIN
+    READ (sentence);
+    WHILE (sentence[countLength] != null) DO
+        countLength := countLength + 1;
+    END_WHILE
+
+    WRITE (countLength);
+
+    for (var i=0; i< countLength.length; i++)
+        if (sentence[i] := " ") THEN
+        countWord := countWord + 1;
+        END_IF
+
+
+
+        if (sentence[i] := "a" OR sentence[i] := "e" OR sentence[i] := "i" OR sentence[i] := "o" OR sentence[i] :="u" OR sentence[i] :="y") THEN
+        countVowel := countVowel + 1;
+        END_IF
+    END_FOR
+
+    WRITE (countWord);
+    WRITE (countVowel);
+
+
+
+END
